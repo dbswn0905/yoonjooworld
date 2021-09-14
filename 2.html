@@ -12,20 +12,77 @@
 </script>
 <title>Yoonjoo's World</title>
 <meta charset="utf-8">
+<style>
+body{
+  margin:0;
+}
+a {
+  color:black;
+  text-decoration:none;
+}
+#active{
+  color:red;
+}
+.saw{
+  color:black;
+}
+
+h1{
+  font-size:60px;
+  text-align: center;
+  border-bottom:1px solid black;
+  margin:0;
+padding:20px;
+}
+ol{
+  border-right:1px solid black;
+  width:150px;
+  margin:0;
+  padding:20px;
+}
+#grid{
+  border:1px ;
+  display:grid;
+  grid-template-columns: 200px 1fr;
+  /*fr은 자동크기조절 */
+}
+#article{
+  padding:5px;
+  margin:0;
+}
+div{
+  border:1px;
+}
+@media(max-width:612px){
+  #grid{
+    border:1px ;
+    display:block;
+    /*fr은 자동크기조절 */
+  }
+  ol{
+    border-right:none;
+}
+h1{
+  border-bottom:none;
+  font-size:30px;
+}
+</style>
+
 </head>
 
 <body>
   <h1><a href="index.html">정윤주는 누구인가?</a></h1>
-
+<div id="grid">
 <ol>
-  <li><a href="1.html"> 자기소개 </a></li>
-  <li><a href="2.html"> 좋아하는 취미 </a></li>
+  <li><a href="1.html" class="saw"> 자기소개 </a></li>
+  <li><a href="2.html" class="saw" id="active">좋아하는 취미 </a></li>
   <li><a href="3.html"> 잘하는 것 </a></li>
 </ol>
-
+<div id="article">
 <h2>까망이랑 뒹굴기</h2>
 저는 까망이랑 뒹구는 것을 가장 좋아해요.<br>
 누나를 닮은 까망이는 정말 예쁘고 잘생겼답니다.
 <image src="까망이.jpg" width="50%">
-
+</div>
+</div>
 </body>
